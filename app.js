@@ -18,7 +18,9 @@ var commentRoutes    = require("./routes/comments"),
     devRoutes        = require("./routes/dev")
 
 mongoose.Promise = global.Promise;    
-mongoose.connect("mongodb://localhost/hiking_trail", { useMongoClient: true });
+//mongoose.connect("mongodb://localhost/hiking_trail", { useMongoClient: true });
+mongoose.connect("mongodb://hafiz:123@ds151232.mlab.com:51232/hikingspot", { useMongoClient: true });
+
 app.use(bodyParser.urlencoded({extended: true})); // telling express 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname+"/public"));
