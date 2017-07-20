@@ -1,0 +1,42 @@
+<% include ../partials/header %>
+
+
+   
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+             <h1>Welcome to Jom Hiking</h1>
+             <p>View our interesting hiking spots all around Malaysia recommended by Jom Hiking community.</p>
+             <p>If you happen to know any other interesting hiking spot feel free to add a new one!</p>
+              <a class="btn btn-primary btn-lg" href="/campgrounds/new">Add New Hiking Spot</a>
+        </div>
+    </header>
+    
+    <div class="row text-center">
+        <div class="col-lg-12">
+            <h3>List of Our Hiking Spots All Around Malaysia</h3>
+        </div>
+    </div>
+    
+        <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+            <% campgrounds.forEach(function(campground){ %>
+                <div class="col-md-3 col-sm-6">
+                    <div class="thumbnail">
+                        <img src= "<%= campground.image %>">
+                        <div class="caption">
+                            <h4><%= campground.name %></h4>
+                        </div>
+                        <p>
+                            <a href="/campgrounds/<%= campground._id %>" class= "btn btn-primary">More Info</a>
+                        </p>
+                    </div>
+                    
+                    
+                </div>
+
+            <% }); %>
+        </div>
+        
+</div>
+
+<% include ../partials/footer %>
