@@ -39,13 +39,20 @@ router.get("/login", function(req, res) {
 });
 
 //handling login logic using middleware
-router.post("/login", passport.authenticate("local",
+/*router.post("/login", passport.authenticate("local",
     {
         successRedirect:"/campgrounds",
         failureRedirect:"/login"
     }), function(req, res) {
                
-});
+});*/
+
+router.post("/login", passport.authenticate("local", {
+        successRedirect: "/campgrounds",
+        failureRedirect: "/login",
+        successFlash: "You have successfully logged in.",
+        failureFlash: "Login failed, you have entered incorrect credentials."
+    }));
 
 // logout route
 router.get("/logout", function(req,res){
