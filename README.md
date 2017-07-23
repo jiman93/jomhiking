@@ -1,5 +1,5 @@
 # jomhiking
 
-Repository for MVC website using Full-stack Javascript technology.
+Repository for MVC designed website using Full-stack Javascript technology.
 http://jomhiking.herokuapp.com/dev
 
