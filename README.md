@@ -1,5 +1,4 @@
 # jomhiking
 
-Repository for MVC designed website using Full-stack Javascript technology.
-http://jomhiking.herokuapp.com/dev
+Repository for http://jomhiking.herokuapp.com/dev, developed using ExpressJS MVC framework.
 
